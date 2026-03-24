@@ -1,0 +1,169 @@
+{
+  // ==========================================
+  // ZEN MODE (Maximum screen space for code)
+  // ==========================================
+
+  "workbench.startupEditor": "none",                        // No welcome tab on launch
+  // "workbench.activityBar.location": "hidden",              // Hides left sidebar icons (use Ctrl+Shift+E/X/G for Explorer/Git/Extensions)
+  "workbench.statusBar.visible": false,                   // Hides bottom status bar (git branch, line count, etc.)
+  "workbench.tree.indent": 16,                            // Deeper folder nesting visibility
+  "editor.minimap.enabled": false,                       // Removes code preview map on right (you have scroll position indicator)
+  "editor.scrollbar.horizontal": "hidden",                 // Hides horizontal scrollbar (use wordWrap or Shift+Scroll)
+  "breadcrumbs.enabled": false,                            // Removes file path navigation above editor tabs
+
+  // ==========================================
+  // AI FEATURES (Disabled per original request)
+  // ==========================================
+
+  "chat.disableAIFeatures": true,                         // Master kill switch for all Copilot/AI UI elements
+  "chat.commandCenter.enabled": false,                     // Removes AI button from title bar
+
+  // ==========================================
+  // PRIVACY & TELEMETRY
+  // ==========================================
+
+  "telemetry.telemetryLevel": "off",
+  "telemetry.editStats.enabled": false,
+  "telemetry.feedback.enabled": false,
+  "gitlens.telemetry.enabled": false,
+
+  // ==========================================
+  // APPEARANCE
+  // ==========================================
+
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.iconTheme": "file-icons",
+
+  // ==========================================
+  // TYPOGRAPHY & EDITOR EXPERIENCE
+  // ==========================================
+
+  "editor.fontFamily": "DepartureMono Nerd Font Mono",
+  "editor.fontLigatures": true,                           // Combines => != >= into single glyphs (requires Nerd Font)
+  "editor.lineHeight": 1.6,                              // Breathing room between lines (default is 1.5)
+  "editor.smoothScrolling": true,                        // Pixel-smooth scrolling instead of line-by-line jumps
+  "editor.cursorSmoothCaretAnimation": "on",             // Smooth caret movement when clicking/moving cursor
+  "editor.renderWhitespace": "boundary",                 // Shows spaces only at start/end of lines, not between words
+  "editor.guides.bracketPairs": "active",                // Highlights only the active bracket pair (scope visualization)
+  "editor.linkedEditing": true,                          // Auto-syncs HTML/JSX opening and closing tag names
+  "editor.stickyScroll.enabled": true,                   // Pins function/class names to top when scrolling deep into code
+  "editor.wordWrap": "on",                               // Soft wraps long lines (no horizontal scroll needed)
+
+  // ==========================================
+  // FILE HANDLING (Git-friendly hygiene)
+  // ==========================================
+
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,                           // 1 second pause before auto-saving (prevents save storms while typing)
+  "files.trimTrailingWhitespace": true,                  // Removes trailing spaces on save (reduces git diff noise)
+  "files.insertFinalNewline": true,                      // Ensures file ends with \n (POSIX standard, fixes git warnings)
+
+  // ==========================================
+  // EXPLORER (Zero confirmation workflow)
+  // ==========================================
+
+  "explorer.compactFolders": false,                      // Shows full folder tree structure (not compressed single-child folders)
+  "explorer.confirmDelete": false,                       // No "Are you sure?" dialog when deleting files
+  "explorer.confirmDragAndDrop": false,                  // No confirmation when dragging files between folders
+
+  // ==========================================
+  // TERMINAL (PowerShell 7 + Windows Terminal)
+  // ==========================================
+
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell",
+      "args": ["-NoExit", "-NoLogo"]                      // -NoLogo removes Microsoft copyright banner, -NoExit keeps shell open
+    }
+  },
+  "terminal.external.windowsExec": "C:\\Users\\ctx\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe",
+  "terminal.integrated.smoothScrolling": true,           // Matches editor smooth scroll behavior
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorBlinking": true,
+
+  // ==========================================
+  // FORMATTERS (Prettier on save)
+  // ==========================================
+
+  "editor.formatOnSave": true,                           // Actually triggers Prettier (not just defined, but active)
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+
+  // ==========================================
+  // ZIG LANGUAGE
+  // ==========================================
+
+  "zig.zls.enabled": "on",
+
+  // ==========================================
+  // GIT (Automation & reduced friction)
+  // ==========================================
+
+  "git.autofetch": true,                                 // Automatically fetches remote status every few minutes (no manual refresh)
+  "git.enableSmartCommit": true,                         // Stages all changes and commits if nothing is staged (no "nothing to commit" errors)
+  "git.confirmSync": false,                              // No "Are you sure?" when pushing/pulling
+  "git.openRepositoryInParentFolders": "always",         // Auto-detects git repos when opening subfolders
+  "git.showPushSuccessNotification": false,              // Disables "Successfully pushed" toast notifications
+
+  // ==========================================
+  // GITLENS (Aggressive decluttering)
+  // ==========================================
+
+  "gitlens.plusFeatures.enabled": false,
+  "gitlens.views.scm.grouped.views": {
+    "commits": false,                                    // Disables all sidebar views to keep Source Control panel minimal
+    "branches": false,
+    "remotes": false,
+    "stashes": false,
+    "tags": false,
+    "worktrees": false,
+    "contributors": false,
+    "repositories": false,
+    "searchAndCompare": false,
+    "launchpad": false,
+    "fileHistory": false
+  },
+
+  // ==========================================
+  // NOTEBOOKS / JUPYTER
+  // ==========================================
+
+  "jupyter.askForKernelRestart": false,                  // No confirmation when restarting Jupyter kernel
+  "notebook.output.minimalErrorRendering": true,       // Collapses long stack traces in notebook cells
+  "notebook.output.scrolling": true,                    // Enables scrolling for large cell outputs (not expanded inline)
+
+  // ==========================================
+  // PERFORMANCE (Large project optimization)
+  // ==========================================
+
+  "search.exclude": {
+    "**/node_modules": true,                             // Prevents searching in dependency folders (massive speedup)
+    "**/dist": true,                                     // Excludes build output
+    "**/build": true,
+    "**/.git": true,
+    "**/*.log": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/**": true,                          // Stops file watcher from monitoring dependency changes (reduces CPU)
+    "**/dist/**": true,
+    "**/.git/objects/**": true
+  }
+}
