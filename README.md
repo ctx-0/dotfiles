@@ -24,4 +24,14 @@ winget install -e Atuinsh.Atuin
 winget install --exact --id restic.restic --scope Machine
 winget install eza-community.eza
 winget install ajeetdsouza.zoxide
+winget install --id JesseDuffield.lazygit
 ```
+
+Config Locations
+
+| File | Target Location |
+|------|-----------------|
+| `vscode/settings.json` | `%APPDATA%\Code\User\settings.json` |
+| `starship.toml` | `%USERPROFILE%\.config\starship.toml` |
+| `windows/powershell/Microsoft.PowerShell_profile.ps1` | `%USERPROFILE%\Documents\PowerShell\Microsoft.PowerShell_profile.ps1` |
+| `windows/windows-terminal/settings.json` | `%LOCALAPPDATA%\Microsoft\Windows Terminal\settings.json` |
