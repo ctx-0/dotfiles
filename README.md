@@ -27,6 +27,11 @@ winget install ajeetdsouza.zoxide
 winget install --id JesseDuffield.lazygit
 ```
 
+misc: for yt-dlp
+```pwsh
+winget install --id=DenoLand.Deno
+```
+
 Config Locations
 
 | File | Target Location |

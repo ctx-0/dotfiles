@@ -2,7 +2,7 @@
 
 -P "home:D:\Youtube"
 -P "temp:D:\Youtube\tmp"
---download-archive "D:\Youtube\history.txt" # Must be absolute (no variables allowed)
+# --download-archive "D:\Youtube\history.txt"
 
 # -- AUDIO DEFAULTS (when using -x flag)
 --audio-format m4a                                   # Default to M4A container, no WebM
