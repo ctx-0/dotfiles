@@ -1,0 +1,33 @@
+# -- BASE DIRECTORY
+
+-P "home:D:\Youtube"
+-P "temp:D:\Youtube\tmp"
+--download-archive "D:\Youtube\history.txt" # Must be absolute (no variables allowed)
+
+# -- AUDIO DEFAULTS (when using -x flag)
+--audio-format m4a                                   # Default to M4A container, no WebM
+
+# -- SUBTITLES (Embed Only)
+--write-subs                                         # Manual/community captions
+--sub-langs en,-live_chat                            # English only, skip chat replay spam
+--embed-subs                                         # Burn into video file; no external .srt files
+
+# -- METADATA
+--embed-thumbnail                                    # YouTube thumb as video cover art
+--embed-metadata                                     # Title, channel, date, description
+--embed-chapters                                     # YouTube timestamps → seekable chapters
+--add-metadata                                       # Add yt-dlp signature in comment field
+
+# -- RESUME & RELIABILITY
+--continue                                           # Resume partial downloads (crash-safe)
+--fragment-retries 10                                # Retry failed chunks 10x
+--retries 10                                         # Retry connection failures 10x
+--file-access-retries 3                              # Retry if Windows locks file (antivirus)
+--concurrent-fragments 3                           # Download 3 chunks simultaneously (faster)
+--buffer-size 16K                                    # Network buffer (helps unstable wifi)
+--no-overwrites                                      # Skip existing files (don't replace)
+
+# -- OUTPUT FORMATTING
+--progress                                           # Visual progress bar + ETA
+--color auto                                         # Colors in Windows Terminal
+--windows-filenames                                  # Auto-sanitize illegal Windows chars (& truncate)
