@@ -65,6 +65,7 @@
   "explorer.compactFolders": false,                      // Shows full folder tree structure (not compressed single-child folders)
   "explorer.confirmDelete": false,                       // No "Are you sure?" dialog when deleting files
   "explorer.confirmDragAndDrop": false,                  // No confirmation when dragging files between folders
+  "explorer.sortOrder": "type",                          // Sort by file type (extension) - groups .js, .py, .md files together
 
   // ==========================================
   // TERMINAL (PowerShell 7 + Windows Terminal)
@@ -73,7 +74,7 @@
   "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
-      "source": "PowerShell",
+      "path": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
       "icon": "terminal-powershell",
       "args": ["-NoExit", "-NoLogo"]                      // -NoLogo removes Microsoft copyright banner, -NoExit keeps shell open
     }
