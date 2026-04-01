@@ -1,5 +1,13 @@
 # dotfiles
 
+my dotfiles, if you use these your on your own ~
+
+![risk.png](./img.png)
+
+yet to add linux files...
+
+
+
 ## windows
 
 Always install modern [PowerShell](https://github.com/PowerShell/PowerShell) and ditch legacy Windows PowerShell.
